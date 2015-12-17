@@ -1,2 +1,2 @@
 # neutrinoslb.github.io
-adding readme
+adding readme for netrino website

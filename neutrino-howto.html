@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+	<!--<![endif]-->
+
+	<head>
+		<meta charset="utf-8">
+		<title>Neutrino Software Load Balancer</title>
+		<meta name="description" content="The Project a Bootstrap-based, Responsive HTML5 Template">
+		<meta name="author" content="htmlcoder.me">
+
+		<!-- Mobile Meta -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!-- Favicon -->
+		<link rel="shortcut icon" href="images/favicon.ico">
+
+		<!-- Web Fonts -->
+		<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic,500,500italic,700,700italic' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Raleway:700,400,300' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=PT+Serif' rel='stylesheet' type='text/css'>
+
+		<!-- Bootstrap core CSS -->
+		<link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+
+		<!-- Font Awesome CSS -->
+		<link href="fonts/font-awesome/css/font-awesome.css" rel="stylesheet">
+
+		<!-- Fontello CSS -->
+		<link href="fonts/fontello/css/fontello.css" rel="stylesheet">
+
+		<!-- Plugins -->
+		<link href="plugins/magnific-popup/magnific-popup.css" rel="stylesheet">
+		<link href="plugins/rs-plugin/css/settings.css" rel="stylesheet">
+		<link href="css/animations.css" rel="stylesheet">
+		<link href="plugins/owl-carousel/owl.carousel.css" rel="stylesheet">
+		<link href="plugins/owl-carousel/owl.transitions.css" rel="stylesheet">
+		<link href="plugins/hover/hover-min.css" rel="stylesheet">		
+
+		<!-- the project core CSS file -->
+		<link href="css/style.css" rel="stylesheet" >
+
+		<!-- Color Scheme (In order to change the color scheme, replace the blue.css with the color scheme that you prefer)-->
+		<link href="css/skins/light_blue.css" rel="stylesheet">
+
+		<!-- Custom css --> 
+		<link href="css/custom.css" rel="stylesheet">
+	</head>
+
+	<!-- body classes:  -->
+	<!-- "boxed": boxed layout mode e.g. <body class="boxed"> -->
+	<!-- "pattern-1 ... pattern-9": background patterns for boxed layout mode e.g. <body class="boxed pattern-1"> -->
+	<!-- "transparent-header": makes the header transparent and pulls the banner to top -->
+	<!-- "page-loader-1 ... page-loader-6": add a page loader to the page (more info @components-page-loaders.html) -->
+	<body class="no-trans front-page  page-loader-4">
+
+		<header class="header  fixed  dark clearfix">
+					
+					<div class="container">
+						<div class="row">
+							<div class="col-md-3">
+								<!-- header-left start -->
+								<!-- ================ -->
+								<div class="header-left clearfix">
+
+									<!-- logo -->
+									<div id="logo" class="logo">
+										<a href="neutrino-landing.html"><img id="logo_img" src="images/logo.png" alt="The Project"></a>
+										
+									</div>
+
+									<div class="site-slogan">
+										Software Load Balancer
+									</div>
+									
+								</div>
+								<!-- header-left end -->
+
+							</div>
+							<div class="col-md-9">
+					
+								<!-- header-right start -->
+								<!-- ================ -->
+								<div class="header-right clearfix">
+									
+								<!-- main-navigation start -->
+								<!-- classes: -->
+								<!-- "onclick": Makes the dropdowns open on click, this the default bootstrap behavior e.g. class="main-navigation onclick" -->
+								<!-- "animated": Enables animations on dropdowns opening e.g. class="main-navigation animated" -->
+								<!-- "with-dropdown-buttons": Mandatory class that adds extra space, to the main navigation, for the search and cart dropdowns -->
+								<!-- ================ -->
+								<div class="main-navigation  animated with-dropdown-buttons">
+
+									<!-- navbar start -->
+									<!-- ================ -->
+									<nav class="navbar navbar-default" role="navigation">
+										<div class="container-fluid">
+
+											<!-- Toggle get grouped for better mobile display -->
+											<div class="navbar-header">
+												<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-1">
+													<span class="sr-only">Toggle navigation</span>
+													<span class="icon-bar"></span>
+													<span class="icon-bar"></span>
+													<span class="icon-bar"></span>
+												</button>
+												
+											</div>
+
+											<!-- Collect the nav links, forms, and other content for toggling -->
+											<div class="collapse navbar-collapse" id="navbar-collapse-1">
+												<!-- main-menu -->
+												<ul class="nav navbar-nav ">
+
+													
+													<li class="dropdown ">
+														<a href="neutrino-landing.html" class="dropdown-toggle" data-toggle="dropdown">Home</a>
+														<ul class="dropdown-menu">
+															<li ><a href="neutrino-landing.html#why">Why Neutrino</a></li>
+															<li ><a href="neutrino-landing.html#comparison">Comparison with other SLBs</a></li>
+															
+														</ul>
+													</li>
+													<li class="dropdown ">
+														<a href="neutrino-doc.html#main" class="dropdown-toggle" data-toggle="dropdown">Docs</a>
+														<ul class="dropdown-menu">
+															<li ><a href="neutrino-doc.html#main">High Level Design</a></li>
+															<li ><a href="neutrino-doc.html#pipeline">PipeLine Architecture</a></li>
+															<li ><a href="neutrino-doc.html#poolresolvers">Pool Resolvers</a></li>
+															<li ><a href="neutrino-doc.html#poolbalancers">Pool Balancers</a></li>
+															
+														</ul>
+													</li>
+													
+													<li class="dropdown ">
+														<a href="neutrino-howto.html" class="dropdown-toggle" data-toggle="dropdown">How to start</a>
+														<ul class="dropdown-menu">
+															<li ><a href="neutrino-howto.html">Starting SLB</a></li>
+															<li ><a href="neutrino-howto.html#dynamicconfig">Dynamic configuration</a></li>
+															<li ><a href="neutrino-howto.html#multiportconfig">Multiport Configuration</a></li>
+															<li ><a href="neutrino-howto.html#graphite">Graphite Integration</a></li>
+															<li ><a href="neutrino-howto.html#netty">Netty Thread Configuration</a></li>
+														</ul>
+													</li>
+													
+													<li class="dropdown ">
+														<a href="neutrino-metricsandapi.html#metrics" class="dropdown-toggle" data-toggle="dropdown">Metrics and API</a>
+														<ul class="dropdown-menu">
+															<li ><a href="neutrino-metricsandapi.html#metrics">Overview</a></li>
+															<li ><a href="neutrino-metricsandapi.html#Pools">Pools</a></li>
+															<li ><a href="neutrino-metricsandapi.html#Servers">Servers</a></li>
+															<li ><a href="neutrino-metricsandapi.html#reload">Reload</a></li>
+														</ul>
+													</li>
+													
+													
+													<li class="dropdown ">
+														<a href="neutrino-howto.html#contributions" class="dropdown-toggle" data-toggle="dropdown">About</a>
+														<ul class="dropdown-menu">
+															<li ><a href="neutrino-howto.html#contributions">Contributions</a></li>
+															
+														</ul>
+													</li>
+													
+												</ul>
+												<!-- main-menu end -->
+												
+												
+												<!-- header dropdown buttons end-->
+												
+											</div>
+
+										</div>
+									</nav>
+									<!-- navbar end -->
+
+								</div>
+								<!-- main-navigation end -->	
+								</div>
+								<!-- header-right end -->
+					
+							</div>
+						</div>
+					</div>
+					
+				</header>
+		<!-- scrollToTop -->
+		<!-- ================ -->
+		<div class="scrollToTop circle"><i class="icon-up-open-big"></i></div>
+		
+		<!-- page wrapper start -->
+		<!-- ================ -->
+		<div class="page-wrapper">
+		
+			<!-- header-container start -->
+			
+		
+
+			<!-- main-container start -->
+			<!-- ================ -->
+			<section class="main-container">
+
+				<div class="container">
+					<div class="row">
+
+						<!-- main start -->
+						<!-- ================ -->
+						<div id="howto" class="main col-md-8">
+
+							<!-- page-title start -->
+							<!-- ================ -->
+							<h3 class="page-title">How to start SLB</h3>
+							<div class="separator-2"></div>
+							
+							<!-- page-title end -->
+
+							<!-- blogpost start -->
+							<article class="blogpost">
+								<div id="carousel-blog-post" class="carousel slide" data-ride="carousel">
+									<!-- Indicators -->
+									<ol class="carousel-indicators bottom margin-clear">
+										<li data-target="#carousel-blog-post" data-slide-to="0" class="active"></li>
+										<li data-target="#carousel-blog-post" data-slide-to="1"></li>
+										<li data-target="#carousel-blog-post" data-slide-to="2"></li>
+									</ol>
+
+									
+								
+								<div class="blogpost-content">
+									<p>Neutrino is developed in scala. Currently, building the core requires </p>
+									<ul>
+											  <li>JDK 1.7+</li>
+											  <li>Scala 2.11+</li>
+											  <li>SBT 0.13.7</li>
+									</ul>
+									<p>Please follow the steps to build Neutrino</p>
+									<ul>
+											  <li>Checkout the Git Repo <a href="https://github.corp.ebay.com/neutrino/neutrino-opensource">GitHub</a></li>
+											  <li>Goto neutrino dir</li>
+											  <li>Run the command "sbt pack"</li>
+											  <li>"sbt pack" command will build Neutrino and create the jar files. You can find all the final jar files in "target/pack/lib"</li>
+											  <li>Create the slb.conf in "/etc/neutrino". Please refer to a sample slb.conf for reference</li>
+											  <li>Run "target/pack/sl-b"</li>
+											  <li>Open hosts file and add canonical name(cname) entries</li>
+											  <ul>
+												<li>127.0.0.1       cname1.com</li>
+												<li>127.0.0.1       cnamewildcard.com</li>
+											  </ul>
+											  <li>Run a webserver at 9999 port and/or 9998 port. Least Connection balancer will make sure that to send the traffic only if the server is up</li>
+											  <li>Hit the URL curl cname1com:8080</li>
+											  <li>Hit the URL curl cnamewildcard.com:8080/website</li>
+												
+									</ul>
+									<p><h3>slb.conf</h3></p>
+<pre><code class="java">
+neutrino {
+  # Use this to enable/disable the direct SLB api
+  enable-api = true,
+}
+neutrino.file {
+  #Refresh time for file
+  file-refresh-period = 30s
+}
+
+resolvers.neutrino {
+
+
+  listeners = [
+    {
+      # pool resolvers configured
+      pool-resolver = ["cname", "layerseven"],
+      # listening port of SLB
+      port = 8080,
+      protocol = "http"
+    }
+	
+
+  ]
+  
+  initializers = [
+    "com.ebay.neutrino.metrics.MetricsLifecycle"
+  ]
+  metrics = [
+    # Support for console logging
+    { type = "console",  publish-period = 1m }
+  ]
+  
+  # pools configuration
+  pools = [
+    # pool 1, lc = least connection
+    { id = "cname1_id", protocol = "http", balancer = "lc", port = "8080",
+      # servers are the VM/Servers to which traffic will be routed
+      servers = [
+        { id="server1", host = "localhost", port = "9999" }
+        { id="server2", host = "localhost", port = "9998" }
+      ]
+      # All traffic which comes with header Host=cname1.com will be routed to localhost.
+      # cname1.com should uniquely to idenitfy a pool
+      addresses = [
+        { host="cname1.com" }
+
+      ]
+      # wildcard shares the balancer and protocol with addresses
+      # All traffic which comes with header host=cnamewildcard.com amd path=local will be routed to localhost.
+      # host + path should be unique to identify the pool
+      wildcard = [
+        {host="cnamewildcard.com", path="/website" }
+      ]
+	  timeout= {
+        read-idle-timeout = 1s,
+        write-idle-timeout = 1s,
+        write-timeout = 1s,
+        session-timeout = 1s,
+        request-timeout = 1s,
+        connection-timeout = 1s
+
+      }
+    },
+    # pool 2
+    { id = "cname2_id", protocol = "http", balancer = "round-robin", port = "8080",
+      servers = [
+        { id="server3", host = "www.ebay1.com", port = "80" }
+      ]
+      addresses = [
+        {host="cname2.com" }
+      ]
+      wildcard = [
+        {host="cnamewildcard.com", path="/ebay" }
+      ]
+    }
+
+  ]
+}									
+
+								</code></pre>									
+									
+									
+									   
+								</div>
+								
+								
+								
+							</article>
+							<!-- blogpost start -->
+							<article id="dynamicconfig" class="blogpost">
+								<header>
+									<h2><a href="blog-post.html">Dynamic Configuration</a></h2>
+									
+								</header>
+								<div class="blogpost-content">
+									<p>Neutrino can be dynamically re-configured when it running without bringing down the connections. Following is the code which loads the confuguration in a fixed interval. Instead of that, it can changed to load the data from a API end point or DB. Also instead of a pull model, push model is implemented by exposing a update Refresh API in Neutrino</p>
+									<pre><code class="java">
+class SLBLoader extends Actor with Logging {
+  import context.dispatcher
+
+  // Create a new SLB Configuration based off the file
+  val config  = SystemConfiguration(context.system)
+
+  // Schedule a configuration reload
+  override def preStart() {
+    context.system.scheduler.schedule(5 seconds, config.settings.file.refreshPeriod, self, "reload")
+  }
+
+  def receive: Receive = {
+    case "reload" =>
+      // Create a new SLB configuration
+      val results = Configuration.load("/etc/neutrino/slb.conf", "resolvers")
+      logger.warn("Reloading the configuration: {}")
+      config.topology.update(LoadBalancer(results))
+
+  }
+									</code></pre>
+								</div>
+							
+							</article>
+							<!-- blogpost end -->
+							
+							
+							</article>
+							<!-- blogpost start -->
+							<article id="multiportconfig" class="blogpost">
+								<header>
+									<h2><a href="blog-post.html">Multiport Configuration</a></h2>
+									
+								</header>
+								<div class="blogpost-content">
+									<p>Nuetrino can be configured to listen to multiple ports based on the requirements. Each pool in the configuration can be listened to a single port. But a single cname can shared between two pools, so that a cname can be listened in multiple port numbers  </p>
+									<p><h3>slb.conf</h3></p>
+									<pre><code class="java">
+neutrino {
+  # Use this to enable/disable the direct SLB api
+  enable-api = true
+
+}
+neutrino.file {
+  #Refresh time for file
+  file-refresh-period = 30s
+}
+
+resolvers.neutrino {
+
+  listeners = [
+    {
+      # pool resolvers configured
+      pool-resolver = ["cname", "layerseven"],
+      # listening port of SLB
+      port = 8080,
+      protocol = "http"
+    },
+    {
+      # pool resolvers configured
+      pool-resolver = ["cname", "layerseven"],
+      # listening port of SLB
+      port = 8082,
+      protocol = "http"
+    }
+
+  ]
+  # pools configuration
+  pools = [
+    # pool 1, lc = least connection
+    { id = "cname1_id", protocol = "http", balancer = "lc", port = "8080",
+      # servers are the VM/Servers to which traffic will be routed
+      servers = [
+        { id="server1", host = "localhost", port = "9999" }
+        { id="server2", host = "localhost", port = "9998" }
+      ]
+      # All traffic which comes with header Host=cname1.com will be routed to localhost.
+      # cname1.com should uniquely to idenitfy a pool
+      addresses = [
+        { host="cname1.com" }
+        { host="cname5.com" }
+        
+      ]
+      # wildcard shares the balancer and protocol with addresses
+      # All traffic which comes with header host=cnamewildcard.com amd path=local will be routed to localhost.
+      # host + path should be unique to identify the pool
+      wildcard = [
+        {host="cnamewildcard.com", path="/website" }
+      ]
+      timeout= {
+        read-idle-timeout = 1s,
+        write-idle-timeout = 2s,
+        write-timeout = 3s,
+        session-timeout = 4s,
+        request-timeout = 5s,
+        connection-timeout = 6s
+
+      }
+    },
+    # pool 2
+    { id = "cname2_id", protocol = "http", balancer = "round-robin", port = "8080",
+      servers = [
+        { id="server3", host = "www.ebay1.com", port = "80" }
+      ]
+      addresses = [
+        {host="cname2.com" }
+      ]
+      wildcard = [
+        {host="cnamewildcard.com", path="/ebay" }
+      ]
+    },
+
+    # pool 3
+    { id = "cname3_id", protocol = "http", balancer = "round-robin",  port = "8082",
+      servers = [
+        { id="server4", host = "www.yahoo.com", port = "80" }
+      ]
+      addresses = [
+        {host="cname2.com" }
+      ]
+    }
+
+  ]
+}
+									</code></pre>
+								</div>
+							
+							</article>
+							<!-- blogpost end -->
+							
+							<!-- blogpost start -->
+							<article id="graphite" class="blogpost">
+								<div id="carousel-blog-post" class="carousel slide" data-ride="carousel">
+									<header>
+										<h2>Grapite Integration for metrics</h2>
+									
+									</header>
+
+									
+								
+									<div class="blogpost-content">
+									<p >Graphite is a useful tool to show metrics and it is opensource. Nuetrino allows metrics can be pushed to either to the console or to graphite. It is easy by adding following lines in slb.conf</p>
+									
+								</div>
+									<pre><code class="java">
+resolvers.neutrino {
+
+  listeners = [
+    {
+      # pool resolvers configured
+      pool-resolver = ["cname", "layerseven"],
+      # listening port of SLB
+      port = 8080,
+      protocol = "http"
+    }
+
+  ]
+  
+  initializers = [
+    "com.ebay.neutrino.metrics.MetricsLifecycle"
+  ]
+  metrics = [
+    # Support for console logging
+    { type = "console",  publish-period = 1m },
+
+    # Support for graphite publishing
+    { type = "graphite", publish-period = 1m, host = "host where graphite is installed",port = 2003 }
+  ]
+									</code></pre>
+									   
+								</div>
+								
+								
+								
+							</article>
+							
+							<!-- blogpost start -->
+							<article id="netty" class="blogpost">
+								<div id="carousel-blog-post" class="carousel slide" data-ride="carousel">
+									<header>
+										<h2>Configuring Netty Thread count</h2>
+									
+									</header>
+
+									
+								
+									<div class="blogpost-content">
+									<p >Number of threads for handling connections can configured for each purpose. By default, number of Supervisor thread count is 1 and Worker thread count is 4. The Supervisor thread accepts an incoming connection. The Worker thread handles the traffic of the accepted connection once the Supervisor accepts the connection and registers the accepted connection to the worker. Please refer to the <a href="http://netty.io/wiki/user-guide-for-4.x.html">Netty Article</a> to know about Netty Threads. </p>
+									
+								</div>
+									<pre><code class="java">
+neutrino {
+  # Use this to enable/disable the direct SLB api
+  enable-api = true,
+  
+  supervisorThreadCount = 2,
+
+  workerThreadCount = 8
+
+}
+									</code></pre>
+									   
+								</div>
+								
+								
+								
+							</article>
+							
+							<!-- blogpost start -->
+							<article id="contributions" class="blogpost">
+								<header>
+									<h2>Contributions</h2>
+									
+								</header>
+								<div class="blogpost-content">
+									<p>Any helpful feedback is more than welcome. This includes feature requests, bug reports, pull requests, constructive feedback, and etc. You must agree on this before submitting a pull request</p>
+								</div>
+							
+							</article>
+							<!-- blogpost end -->
+							
+							
+							<!-- blogpost start -->
+							<article id="credits" class="blogpost">
+								<header>
+									<h2>Credits & Acknowledgement</h2>
+									<p>We thanks our manager Srivathsan Canchi, Cloud Infrastructure & Platform Services (CIPS) and legal for the big support on this project and the open source effort.</p>
+								</header>
+							
+							</article>
+							<!-- blogpost end -->
+							
+							<!-- blogpost start -->
+							<article id="authors" class="blogpost">
+								<header>
+									<h2>Authors</h2>
+									<p>Neutrino is developed by eBay PaaS Team.</p>
+								</header>
+							
+							</article>
+							<!-- blogpost end -->
+
+							
+
+							
+							<!-- pagination end -->
+
+						</div>
+						<!-- main end -->
+
+						<!-- sidebar start -->
+						<!-- ================ -->
+						<aside class="col-md-4 col-lg-3 col-lg-offset-1">
+							<div class="sidebar">
+								<div class="block clearfix">
+									<h3 class="title">Sidebar menu</h3>
+									<div class="separator-2"></div>
+									<nav>
+										<ul class="nav nav-pills nav-stacked">
+											<li class="active"><a href="neutrino-landing.html">Home</a></li>
+											<li class="active"><a href="neutrino-howto.html#howto">How to start SLB</a></li>
+											<li class="active"><a href="neutrino-howto.html#dynamicconfig">Dynamic configuration</a></li>
+											<li class="active"><a href="neutrino-howto.html#multiportconfig">MultiPort Configuration</a></li>
+											<li class="active"><a href="neutrino-howto.html#graphite">Graphite Integration</a></li>
+											<li class="active"><a href="neutrino-howto.html#netty">Netty Thread Configuration</a></li>
+											<li><a href="neutrino-howto.html#contributions">Contributions</a></li>
+										</ul>
+									</nav>
+								</div>
+								
+															
+							
+							</div>
+						</aside>
+						<!-- sidebar end -->
+
+					</div>
+				</div>
+			</section>
+			<!-- main-container end -->
+
+			<!-- footer top start -->
+			<!-- ================ -->
+
+			<!-- footer top end -->
+			<!-- footer start (Add "dark" class to #footer in order to enable dark footer) -->
+			<!-- ================ -->
+			<footer id="footer" class="clearfix ">
+
+				
+
+				<!-- .subfooter start -->
+				<!-- ================ -->
+				<div class="subfooter">
+					<div class="container">
+						<div class="subfooter-inner">
+							<div class="row">
+								<div class="col-md-12">
+								    <p class="text-center">Code licensed under Apache License v2.0, documentation and video under CC BY 3.0. </p>
+									<p class="text-center">© 2015 Neutrino by <a target="_blank" href="http://ebay.com">eBay Software Foundation</a>. All Rights Reserved</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- .subfooter end -->
+
+			</footer>
+			<!-- footer end -->
+			
+		</div>
+		<!-- page-wrapper end -->
+
+		<!-- JavaScript files placed at the end of the document so the pages load faster -->
+		<!-- ================================================== -->
+		<!-- Jquery and Bootstap core js files -->
+		<script type="text/javascript" src="plugins/jquery.min.js"></script>
+		<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+
+		<!-- Modernizr javascript -->
+		<script type="text/javascript" src="plugins/modernizr.js"></script>
+
+		<!-- jQuery Revolution Slider  -->
+		<script type="text/javascript" src="plugins/rs-plugin/js/jquery.themepunch.tools.min.js"></script>
+		<script type="text/javascript" src="plugins/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
+
+		<!-- Isotope javascript -->
+		<script type="text/javascript" src="plugins/isotope/isotope.pkgd.min.js"></script>
+		
+		<!-- Magnific Popup javascript -->
+		<script type="text/javascript" src="plugins/magnific-popup/jquery.magnific-popup.min.js"></script>
+		
+		<!-- Appear javascript -->
+		<script type="text/javascript" src="plugins/waypoints/jquery.waypoints.min.js"></script>
+
+		<!-- Count To javascript -->
+		<script type="text/javascript" src="plugins/jquery.countTo.js"></script>
+		
+		<!-- Parallax javascript -->
+		<script src="plugins/jquery.parallax-1.1.3.js"></script>
+
+		<!-- Contact form -->
+		<script src="plugins/jquery.validate.js"></script>
+
+		<!-- Background Video -->
+		<script src="plugins/vide/jquery.vide.js"></script>
+
+		<!-- Owl carousel javascript -->
+		<script type="text/javascript" src="plugins/owl-carousel/owl.carousel.js"></script>
+		
+		<!-- Pace javascript -->
+		<script type="text/javascript" src="plugins/pace/pace.min.js"></script>
+
+		<!-- SmoothScroll javascript -->
+		<script type="text/javascript" src="plugins/jquery.browser.js"></script>
+		<script type="text/javascript" src="plugins/SmoothScroll.js"></script>
+
+		<!-- Initialization of Plugins -->
+		<script type="text/javascript" src="js/template.js"></script>
+
+		<!-- Custom Scripts -->
+		<script type="text/javascript" src="js/custom.js"></script>
+	</body>
+</html>

@@ -1,1 +1,691 @@
-Comming Soon.........
+<!DOCTYPE html>
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+	<!--<![endif]-->
+
+	<head>
+		<meta charset="utf-8">
+		<title>Neutrino Software Load Balancer</title>
+		<meta name="description" content="The Project a Bootstrap-based, Responsive HTML5 Template">
+		<meta name="author" content="htmlcoder.me">
+
+		<!-- Mobile Meta -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!-- Favicon -->
+		<link rel="shortcut icon" href="images/favicon.ico">
+
+		<!-- Web Fonts -->
+		<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic,500,500italic,700,700italic' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Raleway:700,400,300' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=PT+Serif' rel='stylesheet' type='text/css'>
+
+		<!-- Bootstrap core CSS -->
+		<link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+
+		<!-- Font Awesome CSS -->
+		<link href="fonts/font-awesome/css/font-awesome.css" rel="stylesheet">
+
+		<!-- Fontello CSS -->
+		<link href="fonts/fontello/css/fontello.css" rel="stylesheet">
+
+		<!-- Plugins -->
+		<link href="plugins/magnific-popup/magnific-popup.css" rel="stylesheet">
+		<link href="plugins/rs-plugin/css/settings.css" rel="stylesheet">
+		<link href="css/animations.css" rel="stylesheet">
+		<link href="plugins/owl-carousel/owl.carousel.css" rel="stylesheet">
+		<link href="plugins/owl-carousel/owl.transitions.css" rel="stylesheet">
+		<link href="plugins/hover/hover-min.css" rel="stylesheet">
+		
+		<!-- the project core CSS file -->
+		<link href="css/style.css" rel="stylesheet" >
+
+		<!-- Color Scheme (In order to change the color scheme, replace the blue.css with the color scheme that you prefer)-->
+		<link href="css/skins/light_blue.css" rel="stylesheet">
+
+		<!-- Custom css --> 
+		<link href="css/custom.css" rel="stylesheet">
+	</head>
+
+	<!-- body classes:  -->
+	<!-- "boxed": boxed layout mode e.g. <body class="boxed"> -->
+	<!-- "pattern-1 ... pattern-9": background patterns for boxed layout mode e.g. <body class="boxed pattern-1"> -->
+	<!-- "transparent-header": makes the header transparent and pulls the banner to top -->
+	<!-- "page-loader-1 ... page-loader-6": add a page loader to the page (more info @components-page-loaders.html) -->
+	<body class="no-trans   ">
+
+		<!-- scrollToTop -->
+		<!-- ================ -->
+		<div class="scrollToTop circle"><i class="icon-up-open-big"></i></div>
+		
+		<!-- page wrapper start -->
+		<!-- ================ -->
+		<div class="page-wrapper">
+		
+			<!-- header-container start -->
+			<div class="header-container">
+				
+				<!-- header start -->
+				<!-- classes:  -->
+				<!-- "fixed": enables fixed navigation mode (sticky menu) e.g. class="header fixed clearfix" -->
+				<!-- "dark": dark version of header e.g. class="header dark clearfix" -->
+				<!-- "full-width": mandatory class for the full-width menu layout -->
+				<!-- "centered": mandatory class for the centered logo layout -->
+				<!-- ================ --> 
+				<header class="header  fixed dark clearfix">
+					
+					<div class="container">
+						<div class="row">
+							<div class="col-md-3">
+								<!-- header-left start -->
+								<!-- ================ -->
+								<div class="header-left clearfix">
+
+									<!-- logo -->
+									<div id="logo" class="logo">
+										<a href="neutrino-landing.html"><img id="logo_img" src="images/logo.png" alt="The Project"></a>
+										
+									</div>
+
+									<div class="site-slogan">
+										Software Load Balancer
+									</div>
+									
+								</div>
+								<!-- header-left end -->
+
+							</div>
+							<div class="col-md-9">
+					
+								<!-- header-right start -->
+								<!-- ================ -->
+								<div class="header-right clearfix">
+									
+								<!-- main-navigation start -->
+								<!-- classes: -->
+								<!-- "onclick": Makes the dropdowns open on click, this the default bootstrap behavior e.g. class="main-navigation onclick" -->
+								<!-- "animated": Enables animations on dropdowns opening e.g. class="main-navigation animated" -->
+								<!-- "with-dropdown-buttons": Mandatory class that adds extra space, to the main navigation, for the search and cart dropdowns -->
+								<!-- ================ -->
+								<div class="main-navigation  animated with-dropdown-buttons">
+
+									<!-- navbar start -->
+									<!-- ================ -->
+									<nav class="navbar navbar-default" role="navigation">
+										<div class="container-fluid">
+
+											<!-- Toggle get grouped for better mobile display -->
+											<div class="navbar-header">
+												<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-1">
+													<span class="sr-only">Toggle navigation</span>
+													<span class="icon-bar"></span>
+													<span class="icon-bar"></span>
+													<span class="icon-bar"></span>
+												</button>
+												
+											</div>
+
+											<!-- Collect the nav links, forms, and other content for toggling -->
+											<div class="collapse navbar-collapse" id="navbar-collapse-1">
+												<!-- main-menu -->
+												<ul class="nav navbar-nav ">
+
+													
+													<li class="dropdown ">
+														<a href="neutrino-landing.html" class="dropdown-toggle" data-toggle="dropdown">Home</a>
+														<ul class="dropdown-menu">
+															<li ><a href="neutrino-landing.html#why">Why Neutrino</a></li>
+															<li ><a href="neutrino-landing.html#comparison">Comparison with other SLBs</a></li>
+															
+														</ul>
+													</li>
+													<li class="dropdown ">
+														<a href="neutrino-doc.html#main" class="dropdown-toggle" data-toggle="dropdown">Docs</a>
+														<ul class="dropdown-menu">
+															<li ><a href="neutrino-doc.html#main">High Level Design</a></li>
+															<li ><a href="neutrino-doc.html#pipeline">PipeLine Architecture</a></li>
+															<li ><a href="neutrino-doc.html#poolresolvers">Pool Resolvers</a></li>
+															<li ><a href="neutrino-doc.html#poolbalancers">Pool Balancers</a></li>
+															
+														</ul>
+													</li>
+													
+													<li class="dropdown ">
+														<a href="neutrino-howto.html" class="dropdown-toggle" data-toggle="dropdown">How to start</a>
+														<ul class="dropdown-menu">
+															<li ><a href="neutrino-howto.html">Starting SLB</a></li>
+															<li ><a href="neutrino-howto.html#dynamicconfig">Dynamic configuration</a></li>
+															<li ><a href="neutrino-howto.html#multiportconfig">Multiport Configuration</a></li>
+															<li ><a href="neutrino-howto.html#graphite">Graphite Integration</a></li>
+															<li ><a href="neutrino-howto.html#netty">Netty Thread Configuration</a></li>
+														</ul>
+													</li>
+													
+													<li class="dropdown ">
+														<a href="neutrino-metricsandapi.html#metrics" class="dropdown-toggle" data-toggle="dropdown">Metrics and API</a>
+														<ul class="dropdown-menu">
+															<li ><a href="neutrino-metricsandapi.html#metrics">Overview</a></li>
+															<li ><a href="neutrino-metricsandapi.html#Pools">Pools</a></li>
+															<li ><a href="neutrino-metricsandapi.html#Servers">Servers</a></li>
+															<li ><a href="neutrino-metricsandapi.html#reload">Reload</a></li>
+														</ul>
+													</li>
+													
+													
+													<li class="dropdown ">
+														<a href="neutrino-howto.html#contributions" class="dropdown-toggle" data-toggle="dropdown">About</a>
+														<ul class="dropdown-menu">
+															<li ><a href="neutrino-howto.html#contributions">Contributions</a></li>
+															
+														</ul>
+													</li>
+													
+												</ul>
+												<!-- main-menu end -->
+												
+												
+												<!-- header dropdown buttons end-->
+												
+											</div>
+
+										</div>
+									</nav>
+									<!-- navbar end -->
+
+								</div>
+								<!-- main-navigation end -->	
+								</div>
+								<!-- header-right end -->
+					
+							</div>
+						</div>
+					</div>
+					
+				</header>
+				<!-- header end -->
+			</div>
+			<!-- header-container end -->
+		
+			<!-- banner start -->
+			<!-- ================ -->
+			<div class="pv-40 banner">
+				<div class="container clearfix">
+
+					<!-- slideshow start -->
+					<!-- ================ -->
+					<div class="slideshow">
+						
+						<!-- slider revolution start -->
+						<!-- ================ -->
+						<div class="slider-banner-container">
+							<div class="slider-banner-boxedwidth">
+								<ul class="slides">
+								
+									<!-- slide 1 start -->
+									<!-- ================ -->
+									<li data-transition="random" data-slotamount="7" data-masterspeed="500" data-saveperformance="on" data-title="Used by eBay to power QA and LnP pools">
+									
+									<!-- main image -->
+									<img src="images/neutrino_background.png" alt="slidebg1" data-bgposition="center top"  data-bgrepeat="no-repeat" data-bgfit="cover">
+									
+									<!-- Transparent Background -->
+									<div class="tp-caption dark-translucent-bg"
+										data-x="center"
+										data-y="bottom"
+										data-speed="600"
+										data-start="0">
+									</div>
+
+									<!-- LAYER NR. 1 -->
+									<div class="tp-caption sfb fadeout text-center large_white"
+										data-x="center"
+										data-y="110"
+										data-speed="500"
+										data-start="1000"
+										data-easing="easeOutQuad">Why Neutrino
+									</div>	
+
+									<!-- LAYER NR. 2 -->
+									<div class="tp-caption sfb fadeout text-center large_white tp-resizeme hidden-xs"
+										data-x="center"
+										data-y="155"
+										data-speed="500"
+										data-start="1300"
+										data-easing="easeOutQuad"><div class="separator light"></div>
+									</div>	
+
+									<!-- LAYER NR. 3 -->
+									<div class="tp-caption sfb fadeout medium_white text-center hidden-xs"
+										data-x="center"
+										data-y="190"
+										data-speed="500"
+										data-start="1300"
+										data-easing="easeOutQuad"
+										data-endspeed="600">Cloud Ready Software Load Balancer<br>Highly Modular, Pluggable Pipeline<br> Customizable, High performance Netty server <br> 
+									</div>
+
+									<!-- LAYER NR. 4 -->
+									<div class="tp-caption sfb fadeout small_white text-center hidden-xs"
+										data-x="center"
+										data-y="300"
+										data-speed="500"
+										data-start="1600"
+										data-easing="easeOutQuad"
+										data-endspeed="600"><a href="neutrino-doc.html#main" class="btn btn-dark btn-animated">Read More <i class="fa fa-arrow-right"></i></a> <span class="pl-5 pr-5">or</span> <a href="neutrino-howto.html#contributions" class="btn btn-default btn-animated">Contact Us <i class="fa fa-envelope"></i></a>
+									</div>
+
+									</li>
+									<!-- slide 1 end -->
+									
+									<!-- slide 1 start -->
+									<!-- ================ -->
+									<li data-transition="random" data-slotamount="7" data-masterspeed="500" data-saveperformance="on" data-title="Used by eBay to power QA and LnP pools">
+									
+									<!-- main image -->
+									<img src="images/neutrino_background.png" alt="slidebg1" data-bgposition="center top"  data-bgrepeat="no-repeat" data-bgfit="cover">
+									
+									<!-- Transparent Background -->
+									<div class="tp-caption dark-translucent-bg"
+										data-x="center"
+										data-y="bottom"
+										data-speed="600"
+										data-start="0">
+									</div>
+
+									<!-- LAYER NR. 1 -->
+									<div class="tp-caption sfb fadeout text-center large_white"
+										data-x="center"
+										data-y="110"
+										data-speed="500"
+										data-start="1000"
+										data-easing="easeOutQuad">Used by eBay to power QA and LnP pools
+									</div>	
+
+									<!-- LAYER NR. 2 -->
+									<div class="tp-caption sfb fadeout text-center large_white tp-resizeme hidden-xs"
+										data-x="center"
+										data-y="155"
+										data-speed="500"
+										data-start="1300"
+										data-easing="easeOutQuad"><div class="separator light"></div>
+									</div>	
+
+									<!-- LAYER NR. 3 -->
+									<div class="tp-caption sfb fadeout medium_white text-center hidden-xs"
+										data-x="center"
+										data-y="190"
+										data-speed="500"
+										data-start="1300"
+										data-easing="easeOutQuad"
+										data-endspeed="600">eBay uses Neutrino Software Load Balancer to do L7 routing in QA pools <br> Cost effective <br> Horizontally scalable...
+									</div>
+
+									<!-- LAYER NR. 4 -->
+									<div class="tp-caption sfb fadeout small_white text-center hidden-xs"
+										data-x="center"
+										data-y="300"
+										data-speed="500"
+										data-start="1600"
+										data-easing="easeOutQuad"
+										data-endspeed="600"><a href="neutrino-doc.html#main" class="btn btn-dark btn-animated">Read More <i class="fa fa-arrow-right"></i></a> <span class="pl-5 pr-5">or</span> <a href="neutrino-howto.html#contributions" class="btn btn-default btn-animated">Contact Us <i class="fa fa-envelope"></i></a>
+									</div>
+
+									</li>
+									<!-- slide 1 end -->
+
+									<!-- slide 2 start -->
+									<!-- ================ -->
+									<li data-transition="random" data-slotamount="7" data-masterspeed="500" data-saveperformance="on" data-title="Clean and Simple Design">
+									
+									<!-- main image -->
+									<img src="images/slider-boxed-slide-2.jpg" alt="slidebg2" data-bgposition="center top"  data-bgrepeat="no-repeat" data-bgfit="cover">
+
+									<!-- Transparent Background -->
+									<div class="tp-caption dark-translucent-bg"
+										data-x="center"
+										data-y="bottom"
+										data-speed="600"
+										data-start="0">
+									</div>
+
+									<!-- LAYER NR. 1 -->
+									<div class="tp-caption sfb fadeout text-center large_white"
+										data-x="center"
+										data-y="110"
+										data-speed="500"
+										data-start="1000"
+										data-easing="easeOutQuad">Clean and Simple Design
+									</div>	
+
+									<!-- LAYER NR. 2 -->
+									<div class="tp-caption sfb fadeout text-center large_white tp-resizeme hidden-xs"
+										data-x="center"
+										data-y="155"
+										data-speed="500"
+										data-start="1300"
+										data-easing="easeOutQuad"><div class="separator light"></div>
+									</div>	
+
+									<!-- LAYER NR. 3 -->
+									<div class="tp-caption sfb fadeout medium_white text-center hidden-xs"
+										data-x="center"
+										data-y="190"
+										data-speed="500"
+										data-start="1300"
+										data-easing="easeOutQuad"
+										data-endspeed="600">Used Netty as server. <br> Used Request/Response pipeline for easy configuration <br> distributed as a jar file, can be easily configured for your environment...
+									</div>
+
+									<!-- LAYER NR. 4 -->
+									<div class="tp-caption sfb fadeout small_white text-center hidden-xs"
+										data-x="center"
+										data-y="300"
+										data-speed="500"
+										data-start="1600"
+										data-easing="easeOutQuad"
+										data-endspeed="600"><a href="neutrino-doc.html#main" class="btn btn-dark btn-animated">Read More <i class="fa fa-arrow-right"></i></a> <span class="pl-5 pr-5">or</span> <a href="neutrino-howto.html#contributions" class="btn btn-default btn-animated">Contact Us <i class="fa fa-envelope"></i></a>
+									</div>
+
+									</li>
+									<!-- slide 2 end -->
+								</ul>
+								<div class="tp-bannertimer"></div>
+							</div>
+						</div>
+						<!-- slider revolution end -->
+
+					</div>
+					<!-- slideshow end -->
+
+				</div>
+			</div>
+			<!-- banner end -->
+
+			<div id="page-start"></div>
+
+			<!-- section start -->
+			<!-- ================ -->
+			<section class="dark-bg pv-30 padding-bottom-clear clearfix">
+				<div class="container">
+					<h3 class="logo-font text-center text-muted">Neutrino <span class="text-default"></span></h3>
+					<p class="small text-center">Software Load Balancer</p>
+					<br>
+					<div class="row">
+						<div class="col-md-4 ">
+							<div class="feature-box-2 object-non-visible" data-animation-effect="fadeInDownSmall" data-effect-delay="300">
+								<span class="icon default-bg small"><i class="icon-snow"></i></span>
+								
+								<div class="body">
+									<h4 class="title">Modular and pluggable</h4>
+									<p>Because of modular and pluggable design, new Routing policy or resolving polices can be added with out touching the core</p>
+									<a href="neutrino-doc.html#poolresolvers" class="link-dark">Read More<i class="pl-5 fa fa-angle-double-right"></i></a>
+								</div>
+							</div>
+						</div>
+						
+						<div class="col-md-4 ">
+							<div class="feature-box-2 object-non-visible" data-animation-effect="fadeInDownSmall" data-effect-delay="200">
+								<span class="icon default-bg small"><i class="fa fa-connectdevelop"></i></span>
+								<div class="body">
+									<h4 class="title">Customizable Pipeline</h4>
+									<p>Configure all aspects of Load Balancing through configuration file and Request/Response pipeline</p>
+									<a href="neutrino-doc.html#pipeline" class="link-dark">Read More<i class="pl-5 fa fa-angle-double-right"></i></a>
+								</div>
+							</div>
+						</div>
+						
+						<div class="col-md-4 ">
+							<div class="feature-box-2 object-non-visible" data-animation-effect="fadeInDownSmall" data-effect-delay="100">
+								<span class="icon default-bg small"><i class="fa fa-diamond"></i></span>
+								<div class="body">
+									<h4 class="title">Horizontally scalable</h4>
+									<p>Any number of SLBs can run in parrallel, can run in Container/VM/Bare Metals</p>
+									<a href="neutrino-doc.html#main" class="link-dark">Read More<i class="pl-5 fa fa-angle-double-right"></i></a>
+								</div>
+							</div>
+						</div>
+						
+					</div>
+					<br>
+					<div class="row">
+						<div class="col-md-4 ">
+							<div class="feature-box-2 object-non-visible" data-animation-effect="fadeInDownSmall" data-effect-delay="100">
+								<span class="icon default-bg small"><i class="fa fa-check-circle-o"></i></span>
+								<div class="body">
+									<h4 class="title">High Availability and Performance</h4>
+									<p>Provide 99.999% avaliability, can support heavy throughput of 50k - 100k Request/Second </p>
+								
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4 ">
+							<div class="feature-box-2 object-non-visible" data-animation-effect="fadeInDownSmall" data-effect-delay="200">
+								<span class="icon default-bg small"><i class="fa fa-support"></i></span>
+								<div class="body">
+									<h4 class="title">Provides Traffic Metrics and configuration page</h4>
+									<p>Provides Traffic Metrics and configuration APIs for ease of use.</p>
+									<a href="neutrino-metricsandapi.html" class="link-dark">Read More<i class="pl-5 fa fa-angle-double-right"></i></a>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4 ">
+							<div class="feature-box-2 object-non-visible" data-animation-effect="fadeInDownSmall" data-effect-delay="300">
+								<span class="icon default-bg small"><i class="icon-resize-small"></i></span>
+								<div class="body">
+									<h4 class="title">Language agnostic pluggable pipeline</h4>
+									<p>Runtime environment is JVM. New components for the pipeline can be build on any language whose runtime is JVM</p>
+								
+								</div>
+							</div>
+						</div>
+					</div>
+					<br>
+				</div>
+			</section>
+			<!-- section end -->
+
+			<!-- section start -->
+			<section id="why" class="light-gray-bg pv-40">
+				<div class="container">
+					<h3>Why Neutrino</h3>
+					<div>
+						<div>
+							<p>Neutrino is a cloud ready, highly modular, customizable software load balancers compared to HAProxy and NGINX. Neutrino is distributed as a jar file, so that it can be easily configured for any existing topology. It also had a very good Pipeline architectire and pool resolvers, so that Neutrino can configured for any load balancing purpose </p>
+							
+						</div>
+						
+					</div>
+				</div>
+			</section>
+			
+			
+			<!-- ================ -->
+			
+			
+			<div class="clearfix"></div>
+			<!-- section end -->
+			
+			<!-- footer top start -->
+			<!-- ================ -->
+			<div class="dark-bg  default-hovered footer-top animated-text">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-12">
+							<div class="call-to-action text-center">
+								<div class="row">
+									<div class="col-sm-8">
+										<h2>Please check the code in Github</h2>
+										<h2>Waste no more time</h2>
+									</div>
+									<div class="col-sm-4">
+										<p class="mt-10"><a href="https://github.com/eBay/Neutrino" class="btn btn-animated btn-lg btn-gray-transparent ">GitHub</a></p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<section class="light-gray-bg pv-40">
+				<div class="container">
+						<div id="comparison">
+							<h3>Comparison between Neutrino and HAProxy</h3>
+							<link rel="stylesheet" href="http://www.compareninja.com/template/skins/Sky/skin.css" type="text/css">
+							<div style="width: 100%;" id="tableWrapper">
+								<table id="vsTable">
+								<tbody>
+								<tr>
+									<td style="width: 33%;" class="cat title"></td>
+									<td style="width: 33%;" class="title">
+									<div class=""><h3>Neutrino</h3></div></td><td style="width: 33%;" class="title">
+									<div class=""><h3>HAProxy</h3></div></td></tr>
+									<tr class="second">
+										<td style="width: 33%;" class="cat"><div class=""><h4>Distribution</h4></div></td>
+										<td style="width: 33%;" class="cat"><div class=""><h4>Jar File</h4></div></td>
+										<td style="width: 33%;" class="cat"><div class=""><h4>Tar File</h4></div></td>
+									</tr>
+									<tr class="second">
+										<td style="width: 33%;" class="cat"><div class=""><h4>Language Supported</h4></div></td>
+										<td style="width: 33%;" class="cat"><div class=""><h4>Java, Scala</h4></div></td>
+										<td style="width: 33%;" class="cat"><div class=""><h4>C</h4></div></td>
+									</tr>
+									<tr class="second">
+										<td style="width: 33%;" class="cat"><div class=""><h4>Configuration</h4></div></td>
+										<td style="width: 33%;" class="cat"><div class=""><h4>File based and API based</h4></div></td>
+										<td style="width: 33%;" class="cat"><div class=""><h4>Only file based</h4></div></td>
+									</tr>
+									<tr class="second">
+										<td style="width: 33%;" class="cat"><div class=""><h4>Balancers</h4></div></td>
+										<td style="width: 33%;" class="cat"><div class=""><h4>Round-Robin, LeastConnection.</h4></div></td>
+										<td style="width: 33%;" class="cat"><div class=""><h4>Round-Robin, LeastConnection, Source.</h4></div></td>
+									</tr>
+									<tr class="second">
+										<td style="width: 33%;" class="cat"><div class=""><h4>Traffic Metrics and configuration page</h4></div></td>
+										<td style="width: 33%;" class="cat"><div class=""><img id="logo_img" src="https://camo.githubusercontent.com/076d6f7749574fbe245704dffa2933d977271ffd/687474703a2f2f7777772e706172616c6c65632e696f2f696d616765732f7965732e706e67" alt="Supported"></div></td>
+										<td style="width: 33%;" class="cat"><div class=""><img id="logo_img" src="https://camo.githubusercontent.com/a2d657e41e58c3df5f55a7eb67dbc96f48951f9a/687474703a2f2f7777772e706172616c6c65632e696f2f696d616765732f6e6f2e706e67" alt="Not Supported"></div></div></td>
+									</tr>
+									<tr class="second">
+										<td style="width: 33%;" class="cat"><div class=""><h4>Graphite Integration for Metrics</h4></div></td>
+										<td style="width: 33%;" class="cat"><div class=""><img id="logo_img" src="https://camo.githubusercontent.com/076d6f7749574fbe245704dffa2933d977271ffd/687474703a2f2f7777772e706172616c6c65632e696f2f696d616765732f7965732e706e67" alt="Supported"></div></td>
+										<td style="width: 33%;" class="cat"><div class=""><img id="logo_img" src="https://camo.githubusercontent.com/a2d657e41e58c3df5f55a7eb67dbc96f48951f9a/687474703a2f2f7777772e706172616c6c65632e696f2f696d616765732f6e6f2e706e67" alt="Not Supported"></div></div></td>
+									</tr>
+									<tr class="second">
+										<td style="width: 33%;" class="cat"><div class=""><h4>Request/Response Pipeline</h4></div></td>
+										<td style="width: 33%;" class="cat"><div class=""><img id="logo_img" src="https://camo.githubusercontent.com/076d6f7749574fbe245704dffa2933d977271ffd/687474703a2f2f7777772e706172616c6c65632e696f2f696d616765732f7965732e706e67" alt="Supported"></div></td>
+										<td style="width: 33%;" class="cat"><div class=""><img id="logo_img" src="https://camo.githubusercontent.com/a2d657e41e58c3df5f55a7eb67dbc96f48951f9a/687474703a2f2f7777772e706172616c6c65632e696f2f696d616765732f6e6f2e706e67" alt="Not Supported"></div></div></td>
+									</tr>
+									
+									<tr class="second">
+										<td style="width: 33%;" class="cat"><div class=""><h4>Listening to multiple ports</h4></div></td>
+										<td style="width: 33%;" class="cat"><div class=""><img id="logo_img" src="https://camo.githubusercontent.com/076d6f7749574fbe245704dffa2933d977271ffd/687474703a2f2f7777772e706172616c6c65632e696f2f696d616765732f7965732e706e67" alt="Supported"></div></td>
+										<td style="width: 33%;" class="cat"><div class=""><img id="logo_img" src="https://camo.githubusercontent.com/076d6f7749574fbe245704dffa2933d977271ffd/687474703a2f2f7777772e706172616c6c65632e696f2f696d616765732f7965732e706e67" alt="Supported"></div></td>
+									</tr>
+									<tr class="second">
+										<td style="width: 33%;" class="cat"><div class=""><h4>Configure pool to listen to specific ports</h4></div></td>
+										<td style="width: 33%;" class="cat"><div class=""><img id="logo_img" src="https://camo.githubusercontent.com/076d6f7749574fbe245704dffa2933d977271ffd/687474703a2f2f7777772e706172616c6c65632e696f2f696d616765732f7965732e706e67" alt="Supported"></div></td>
+										<td style="width: 33%;" class="cat"><div class=""><img id="logo_img" src="https://camo.githubusercontent.com/a2d657e41e58c3df5f55a7eb67dbc96f48951f9a/687474703a2f2f7777772e706172616c6c65632e696f2f696d616765732f6e6f2e706e67" alt="Not Supported"></div></div></td>
+									</tr>
+									<tr class="second">
+										<td style="width: 33%;" class="cat"><div class=""><h4>L7 Routing</h4></div></td>
+										<td style="width: 33%;" class="cat"><div class=""><img id="logo_img" src="https://camo.githubusercontent.com/076d6f7749574fbe245704dffa2933d977271ffd/687474703a2f2f7777772e706172616c6c65632e696f2f696d616765732f7965732e706e67" alt="Supported"></div></td>
+										<td style="width: 33%;" class="cat"><div class=""><img id="logo_img" src="https://camo.githubusercontent.com/076d6f7749574fbe245704dffa2933d977271ffd/687474703a2f2f7777772e706172616c6c65632e696f2f696d616765732f7965732e706e67" alt="Supported"></div></td>
+									</tr>
+									
+									<tr class="second">
+										<td style="width: 33%;" class="cat"><div class=""><h4>Canonical name  based Routing</h4></div></td>
+										<td style="width: 33%;" class="cat"><div class=""><img id="logo_img" src="https://camo.githubusercontent.com/076d6f7749574fbe245704dffa2933d977271ffd/687474703a2f2f7777772e706172616c6c65632e696f2f696d616765732f7965732e706e67" alt="Supported"></div></td>
+										<td style="width: 33%;" class="cat"><div class=""><img id="logo_img" src="https://camo.githubusercontent.com/076d6f7749574fbe245704dffa2933d977271ffd/687474703a2f2f7777772e706172616c6c65632e696f2f696d616765732f7965732e706e67" alt="Supported"></div></td>
+									</tr>
+									
+									<tr class="second">
+										<td style="width: 33%;" class="cat"><div class=""><h4>L4 Routing</h4></div></td>
+										<td style="width: 33%;" class="cat"><div class=""><img id="logo_img" src="https://camo.githubusercontent.com/a2d657e41e58c3df5f55a7eb67dbc96f48951f9a/687474703a2f2f7777772e706172616c6c65632e696f2f696d616765732f6e6f2e706e67" alt="Not Supported"></div></div></td>
+										<td style="width: 33%;" class="cat"><div class=""><img id="logo_img" src="https://camo.githubusercontent.com/076d6f7749574fbe245704dffa2933d977271ffd/687474703a2f2f7777772e706172616c6c65632e696f2f696d616765732f7965732e706e67" alt="Supported"></div></td>
+									</tr>
+									
+									<tr class="second">
+										<td style="width: 33%;" class="cat"><div class=""><h4>SSL Support</h4></div></td>
+										<td style="width: 33%;" class="cat"><div class=""><img id="logo_img" src="https://camo.githubusercontent.com/a2d657e41e58c3df5f55a7eb67dbc96f48951f9a/687474703a2f2f7777772e706172616c6c65632e696f2f696d616765732f6e6f2e706e67" alt="Not Supported"></div></div></td>
+										<td style="width: 33%;" class="cat"><div class=""><img id="logo_img" src="https://camo.githubusercontent.com/076d6f7749574fbe245704dffa2933d977271ffd/687474703a2f2f7777772e706172616c6c65632e696f2f696d616765732f7965732e706e67" alt="Supported"></div></td>
+									</tr>
+									</tbody></table></div>
+						</div>
+					</div>
+			</section>
+			<!-- footer top end -->
+			
+			<!-- footer start (Add "dark" class to #footer in order to enable dark footer) -->
+			<!-- ================ -->
+			
+				<!-- .footer end -->
+
+				<!-- .subfooter start -->
+				<!-- ================ -->
+				<div class="subfooter">
+					<div class="container">
+						<div class="subfooter-inner">
+							<div class="row">
+								<div class="col-md-12">
+								    <p class="text-center">Code licensed under Apache License v2.0, documentation and video under CC BY 3.0. </p>
+									<p class="text-center">© 2015 Neutrino by <a target="_blank" href="http://ebay.com">eBay Software Foundation</a>. All Rights Reserved</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- .subfooter end -->
+
+			</footer>
+			<!-- footer end -->
+			
+		</div>
+		<!-- page-wrapper end -->
+
+		<!-- JavaScript files placed at the end of the document so the pages load faster -->
+		<!-- ================================================== -->
+		<!-- Jquery and Bootstap core js files -->
+		<script type="text/javascript" src="plugins/jquery.min.js"></script>
+		<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+
+		<!-- Modernizr javascript -->
+		<script type="text/javascript" src="plugins/modernizr.js"></script>
+
+		<!-- jQuery Revolution Slider  -->
+		<script type="text/javascript" src="plugins/rs-plugin/js/jquery.themepunch.tools.min.js"></script>
+		<script type="text/javascript" src="plugins/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
+
+		<!-- Isotope javascript -->
+		<script type="text/javascript" src="plugins/isotope/isotope.pkgd.min.js"></script>
+		
+		<!-- Magnific Popup javascript -->
+		<script type="text/javascript" src="plugins/magnific-popup/jquery.magnific-popup.min.js"></script>
+		
+		<!-- Appear javascript -->
+		<script type="text/javascript" src="plugins/waypoints/jquery.waypoints.min.js"></script>
+
+		<!-- Count To javascript -->
+		<script type="text/javascript" src="plugins/jquery.countTo.js"></script>
+		
+		<!-- Parallax javascript -->
+		<script src="plugins/jquery.parallax-1.1.3.js"></script>
+
+		<!-- Contact form -->
+		<script src="plugins/jquery.validate.js"></script>
+
+		<!-- Owl carousel javascript -->
+		<script type="text/javascript" src="plugins/owl-carousel/owl.carousel.js"></script>
+		
+		<!-- SmoothScroll javascript -->
+		<script type="text/javascript" src="plugins/jquery.browser.js"></script>
+		<script type="text/javascript" src="plugins/SmoothScroll.js"></script>
+
+		<!-- Initialization of Plugins -->
+		<script type="text/javascript" src="js/template.js"></script>
+
+		<!-- Custom Scripts -->
+		<script type="text/javascript" src="js/custom.js"></script>
+	</body>
+</html>

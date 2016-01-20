@@ -137,7 +137,7 @@
 														<a href="neutrino-landing.html" class="dropdown-toggle" data-toggle="dropdown">Home</a>
 														<ul class="dropdown-menu">
 															<li ><a href="neutrino-landing.html#why">Why Neutrino</a></li>
-															<li ><a href="neutrino-landing.html#comparison">Comparison with other SLBs</a></li>
+															<li ><a href="neutrino-landing.html#comparison">When to use Neutrino</a></li>
 															
 														</ul>
 													</li>
@@ -455,7 +455,7 @@
 								<span class="icon default-bg small"><i class="fa fa-check-circle-o"></i></span>
 								<div class="body">
 									<h4 class="title">High Availability and Performance</h4>
-									<p>Provide 99.999% avaliability, can support heavy throughput of 50k - 100k Request/Second </p>
+									<p>Provide 99.999% avaliability, can support heavy throughput upto 300 Request/Second in a 2 Core VM</p>
 								
 								</div>
 							</div>
@@ -532,86 +532,81 @@
 			<section class="light-gray-bg pv-40">
 				<div class="container">
 						<div id="comparison">
-							<h3>Comparison between Neutrino and HAProxy</h3>
-							<link rel="stylesheet" href="http://www.compareninja.com/template/skins/Sky/skin.css" type="text/css">
-							<div style="width: 100%;" id="tableWrapper">
-								<table id="vsTable">
-								<tbody>
-								<tr>
-									<td style="width: 33%;" class="cat title"></td>
-									<td style="width: 33%;" class="title">
-									<div class=""><h3>Neutrino</h3></div></td><td style="width: 33%;" class="title">
-									<div class=""><h3>HAProxy</h3></div></td></tr>
-									<tr class="second">
-										<td style="width: 33%;" class="cat"><div class=""><h4>Distribution</h4></div></td>
-										<td style="width: 33%;" class="cat"><div class=""><h4>Jar File</h4></div></td>
-										<td style="width: 33%;" class="cat"><div class=""><h4>Tar File</h4></div></td>
-									</tr>
-									<tr class="second">
-										<td style="width: 33%;" class="cat"><div class=""><h4>Language Supported</h4></div></td>
-										<td style="width: 33%;" class="cat"><div class=""><h4>Java, Scala</h4></div></td>
-										<td style="width: 33%;" class="cat"><div class=""><h4>C</h4></div></td>
-									</tr>
-									<tr class="second">
-										<td style="width: 33%;" class="cat"><div class=""><h4>Configuration</h4></div></td>
-										<td style="width: 33%;" class="cat"><div class=""><h4>File based and API based</h4></div></td>
-										<td style="width: 33%;" class="cat"><div class=""><h4>Only file based</h4></div></td>
-									</tr>
-									<tr class="second">
-										<td style="width: 33%;" class="cat"><div class=""><h4>Balancers</h4></div></td>
-										<td style="width: 33%;" class="cat"><div class=""><h4>Round-Robin, LeastConnection.</h4></div></td>
-										<td style="width: 33%;" class="cat"><div class=""><h4>Round-Robin, LeastConnection, Source.</h4></div></td>
-									</tr>
-									<tr class="second">
-										<td style="width: 33%;" class="cat"><div class=""><h4>Traffic Metrics and configuration page</h4></div></td>
-										<td style="width: 33%;" class="cat"><div class=""><img id="logo_img" src="https://camo.githubusercontent.com/076d6f7749574fbe245704dffa2933d977271ffd/687474703a2f2f7777772e706172616c6c65632e696f2f696d616765732f7965732e706e67" alt="Supported"></div></td>
-										<td style="width: 33%;" class="cat"><div class=""><img id="logo_img" src="https://camo.githubusercontent.com/a2d657e41e58c3df5f55a7eb67dbc96f48951f9a/687474703a2f2f7777772e706172616c6c65632e696f2f696d616765732f6e6f2e706e67" alt="Not Supported"></div></div></td>
-									</tr>
-									<tr class="second">
-										<td style="width: 33%;" class="cat"><div class=""><h4>Graphite Integration for Metrics</h4></div></td>
-										<td style="width: 33%;" class="cat"><div class=""><img id="logo_img" src="https://camo.githubusercontent.com/076d6f7749574fbe245704dffa2933d977271ffd/687474703a2f2f7777772e706172616c6c65632e696f2f696d616765732f7965732e706e67" alt="Supported"></div></td>
-										<td style="width: 33%;" class="cat"><div class=""><img id="logo_img" src="https://camo.githubusercontent.com/a2d657e41e58c3df5f55a7eb67dbc96f48951f9a/687474703a2f2f7777772e706172616c6c65632e696f2f696d616765732f6e6f2e706e67" alt="Not Supported"></div></div></td>
-									</tr>
-									<tr class="second">
-										<td style="width: 33%;" class="cat"><div class=""><h4>Request/Response Pipeline</h4></div></td>
-										<td style="width: 33%;" class="cat"><div class=""><img id="logo_img" src="https://camo.githubusercontent.com/076d6f7749574fbe245704dffa2933d977271ffd/687474703a2f2f7777772e706172616c6c65632e696f2f696d616765732f7965732e706e67" alt="Supported"></div></td>
-										<td style="width: 33%;" class="cat"><div class=""><img id="logo_img" src="https://camo.githubusercontent.com/a2d657e41e58c3df5f55a7eb67dbc96f48951f9a/687474703a2f2f7777772e706172616c6c65632e696f2f696d616765732f6e6f2e706e67" alt="Not Supported"></div></div></td>
-									</tr>
+							<h3>When to use Neutrino</h3>
+							<div>
+								<div>
+									<p>Neutrino SLB strengh lies in its programmability and customizable nature. It is very easy to customize and adapt to a existing topology. Neutrino is distributed as a jar file, so that it can run as a standalone or can be wrapped around other applications</p>
+									<p>Neutrino can be used for the following Load Balancing and Switching requirements</p>
+									<div class="container">
+										<p class="large text-center"><b>Load Balancing Options</b></p>
+										<br>
+										<div class="row">
+											<div class="col-md-6 ">
+												<div class="feature-box-2 object-non-visible" data-animation-effect="fadeInDownSmall" data-effect-delay="300">
+													<span class="icon default-bg small"><i class="fa fa-connectdevelop"></i></span>
+													
+													<div class="body">
+														<h4 class="title">Least Connection</h4>
+														<p>When a load balancer is configured to use the least connection method, it selects the server with the least number of active connections to ensure that the load of the active requests is balanced on the servers. </p>
+													</div>
+												</div>
+											</div>
+											
+											<div class="col-md-6 ">
+												<div class="feature-box-2 object-non-visible" data-animation-effect="fadeInDownSmall" data-effect-delay="200">
+													<span class="icon default-bg small"><i class="fa fa-connectdevelop"></i></span>
+													<div class="body">
+														<h4 class="title">Round Robin</h4>
+														<p>Round-robin load balancing is one of the simplest methods for distributing client requests across a group of servers. Going down the list of servers in the group, the round-robin load balancer forwards a client request to each server in turn</p>
+													</div>
+												</div>
+											</div>
+											
+										</div>
+									</div>
+									<div class="container">
+										<p class="large text-center"><b>Switching Options</b></p>
+										<br>
+										<div class="row">
+											<div class="col-md-4 ">
+												<div class="feature-box-2 object-non-visible" data-animation-effect="fadeInDownSmall" data-effect-delay="100">
+													<span class="icon default-bg small"><i class="fa fa-support"></i></span>
+													<div class="body">
+														<h4 class="title">L7 Switching</h4>
+														<p>L7 Switching is achieved using canonical names. Every HTTP request will have a url address in HOST header and Neutrino can look at the header and route the traffic to the appropriate pool. For eg, we can have two pools with two canonical names cname1.com and cname2.com.</p>
+														<img id="logo_img" src="images/L7Switching.png" alt="L7Switching"></a>
+													</div>
+												</div>
+											</div>
+											<div class="col-md-4 ">
+												<div class="feature-box-2 object-non-visible" data-animation-effect="fadeInDownSmall" data-effect-delay="200">
+													<span class="icon default-bg small"><i class="fa fa-support"></i></span>
+													<div class="body">
+														<h4 class="title">L7 Context Based Switching</h4>
+														<p>L7 Context Based Switching can be achieved using canonical names and url suffix. It is useful if the same canonical names is used for two services, but with different url suffix. For eg: cname1.com/first to point to one pool and cname1.com/second can point to another pool.
+</p>
+														<img id="logo_img" src="images/L7ContextSwitching.png" alt="L7ContextSwitching"></a>
+													</div>
+												</div>
+											</div>
+											<div class="col-md-4 ">
+												<div class="feature-box-2 object-non-visible" data-animation-effect="fadeInDownSmall" data-effect-delay="300">
+													<span class="icon default-bg small"><i class="fa fa-support"></i></span>
+													<div class="body">
+														<h4 class="title">L4 Switching</h4>
+														<p>L4 Switching can be achieved using multiple port number. Every service will be identified using a port number and traffic coming to each port number will be send to each pool. For eg: cname1.com:1185 point to one pool and cname1.com:1186 point to second pool.</p>
+														<img id="logo_img" src="images/L4Switching.png" alt="L4Switching"></a>
+													</div>
+												</div>
+											</div>
+										</div>
+										<br>
+									</div>
 									
-									<tr class="second">
-										<td style="width: 33%;" class="cat"><div class=""><h4>Listening to multiple ports</h4></div></td>
-										<td style="width: 33%;" class="cat"><div class=""><img id="logo_img" src="https://camo.githubusercontent.com/076d6f7749574fbe245704dffa2933d977271ffd/687474703a2f2f7777772e706172616c6c65632e696f2f696d616765732f7965732e706e67" alt="Supported"></div></td>
-										<td style="width: 33%;" class="cat"><div class=""><img id="logo_img" src="https://camo.githubusercontent.com/076d6f7749574fbe245704dffa2933d977271ffd/687474703a2f2f7777772e706172616c6c65632e696f2f696d616765732f7965732e706e67" alt="Supported"></div></td>
-									</tr>
-									<tr class="second">
-										<td style="width: 33%;" class="cat"><div class=""><h4>Configure pool to listen to specific ports</h4></div></td>
-										<td style="width: 33%;" class="cat"><div class=""><img id="logo_img" src="https://camo.githubusercontent.com/076d6f7749574fbe245704dffa2933d977271ffd/687474703a2f2f7777772e706172616c6c65632e696f2f696d616765732f7965732e706e67" alt="Supported"></div></td>
-										<td style="width: 33%;" class="cat"><div class=""><img id="logo_img" src="https://camo.githubusercontent.com/a2d657e41e58c3df5f55a7eb67dbc96f48951f9a/687474703a2f2f7777772e706172616c6c65632e696f2f696d616765732f6e6f2e706e67" alt="Not Supported"></div></div></td>
-									</tr>
-									<tr class="second">
-										<td style="width: 33%;" class="cat"><div class=""><h4>L7 Routing</h4></div></td>
-										<td style="width: 33%;" class="cat"><div class=""><img id="logo_img" src="https://camo.githubusercontent.com/076d6f7749574fbe245704dffa2933d977271ffd/687474703a2f2f7777772e706172616c6c65632e696f2f696d616765732f7965732e706e67" alt="Supported"></div></td>
-										<td style="width: 33%;" class="cat"><div class=""><img id="logo_img" src="https://camo.githubusercontent.com/076d6f7749574fbe245704dffa2933d977271ffd/687474703a2f2f7777772e706172616c6c65632e696f2f696d616765732f7965732e706e67" alt="Supported"></div></td>
-									</tr>
-									
-									<tr class="second">
-										<td style="width: 33%;" class="cat"><div class=""><h4>Canonical name  based Routing</h4></div></td>
-										<td style="width: 33%;" class="cat"><div class=""><img id="logo_img" src="https://camo.githubusercontent.com/076d6f7749574fbe245704dffa2933d977271ffd/687474703a2f2f7777772e706172616c6c65632e696f2f696d616765732f7965732e706e67" alt="Supported"></div></td>
-										<td style="width: 33%;" class="cat"><div class=""><img id="logo_img" src="https://camo.githubusercontent.com/076d6f7749574fbe245704dffa2933d977271ffd/687474703a2f2f7777772e706172616c6c65632e696f2f696d616765732f7965732e706e67" alt="Supported"></div></td>
-									</tr>
-									
-									<tr class="second">
-										<td style="width: 33%;" class="cat"><div class=""><h4>L4 Routing</h4></div></td>
-										<td style="width: 33%;" class="cat"><div class=""><img id="logo_img" src="https://camo.githubusercontent.com/a2d657e41e58c3df5f55a7eb67dbc96f48951f9a/687474703a2f2f7777772e706172616c6c65632e696f2f696d616765732f6e6f2e706e67" alt="Not Supported"></div></div></td>
-										<td style="width: 33%;" class="cat"><div class=""><img id="logo_img" src="https://camo.githubusercontent.com/076d6f7749574fbe245704dffa2933d977271ffd/687474703a2f2f7777772e706172616c6c65632e696f2f696d616765732f7965732e706e67" alt="Supported"></div></td>
-									</tr>
-									
-									<tr class="second">
-										<td style="width: 33%;" class="cat"><div class=""><h4>SSL Support</h4></div></td>
-										<td style="width: 33%;" class="cat"><div class=""><img id="logo_img" src="https://camo.githubusercontent.com/a2d657e41e58c3df5f55a7eb67dbc96f48951f9a/687474703a2f2f7777772e706172616c6c65632e696f2f696d616765732f6e6f2e706e67" alt="Not Supported"></div></div></td>
-										<td style="width: 33%;" class="cat"><div class=""><img id="logo_img" src="https://camo.githubusercontent.com/076d6f7749574fbe245704dffa2933d977271ffd/687474703a2f2f7777772e706172616c6c65632e696f2f696d616765732f7965732e706e67" alt="Supported"></div></td>
-									</tr>
-									</tbody></table></div>
+								</div>
+								
+							</div>
+							
 						</div>
 					</div>
 			</section>

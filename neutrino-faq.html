@@ -55,8 +55,8 @@
 	<!-- "transparent-header": makes the header transparent and pulls the banner to top -->
 	<!-- "page-loader-1 ... page-loader-6": add a page loader to the page (more info @components-page-loaders.html) -->
 	<body class="no-trans front-page  page-loader-4">
-	
-	<header class="header  fixed  dark clearfix">
+
+		<header class="header  fixed  dark clearfix">
 					
 					<div class="container">
 						<div class="row">
@@ -155,6 +155,7 @@
 														</ul>
 													</li>
 													
+													
 													<li class="dropdown ">
 														<a href="neutrino-howto.html#contributions" class="dropdown-toggle" data-toggle="dropdown">About</a>
 														<ul class="dropdown-menu">
@@ -186,7 +187,6 @@
 					</div>
 					
 				</header>
-
 		<!-- scrollToTop -->
 		<!-- ================ -->
 		<div class="scrollToTop circle"><i class="icon-up-open-big"></i></div>
@@ -195,9 +195,7 @@
 		<!-- ================ -->
 		<div class="page-wrapper">
 		
-			<!-- header-container start -->
 			
-		
 
 			<!-- main-container start -->
 			<!-- ================ -->
@@ -208,315 +206,177 @@
 
 						<!-- main start -->
 						<!-- ================ -->
-						<div id="highlevel" class="main col-md-8">
+						<div class="main col-md-8">
 
 							<!-- page-title start -->
 							<!-- ================ -->
-						
-							
-							
+							<h1 class="page-title">Frequently Asked Questions</h1>
+							<div class="separator-2"></div>
 							<!-- page-title end -->
-
-							<!-- blogpost start -->
-							<article class="blogpost">
-								<div id="carousel-blog-post" class="carousel slide" data-ride="carousel">
-									<!-- Indicators -->
-									<ol class="carousel-indicators bottom margin-clear">
-										<li data-target="#carousel-blog-post" data-slide-to="0" class="active"></li>
-										<li data-target="#carousel-blog-post" data-slide-to="1"></li>
-										<li data-target="#carousel-blog-post" data-slide-to="2"></li>
-									</ol>
-
-									<!-- Wrapper for slides -->
-									
-								<header>
-									<h2>Neutrino</a></h2>
-									
-								</header>
-								<div class="blogpost-content">
-									<p class="lead">Data Center consists of multiple levels of Load Balancing. It starts with Web Tier load balancer which will take the traffic from the internet and pass the traffic to mid tier load balancers. Web Tier load balancers usually are dedicated costly machines brought from the market. It is in the mid tier load balancers, Software Load Balancer(SLB) would fit in. SLB can run Bare Metals, VM or Docker containers and it is open source, so it is cost effective to scale horizontally. All SLB instances will contain all the routing rules and it can be either pushed or pulled from a central repository. Updating the routing rules doesn't affect the existing connection, so frequent updation won't affect the reliability of the system.</p>
-									
-								</div>
-								
-								<img src="images/SLB HighLevel.png" alt="">
-								
-							</article>
-							
-							<!-- blogpost start -->
-							<article class="blogpost">
-								<div id="carousel-blog-post" class="carousel slide" data-ride="carousel">
-									<!-- Indicators -->
-									<ol class="carousel-indicators bottom margin-clear">
-										<li data-target="#carousel-blog-post" data-slide-to="0" class="active"></li>
-										<li data-target="#carousel-blog-post" data-slide-to="1"></li>
-										<li data-target="#carousel-blog-post" data-slide-to="2"></li>
-									</ol>
-
-									<!-- Wrapper for slides -->
-									
-								<header>
-									<h2>Pipeline Architecture</a></h2>
-									
-								</header>
-								<div class="blogpost-content">
-									<p>Request and Response Pipeline is an important feature of SLB. It makes the SLB modular and pluggable.</p>
-									<p>Netty is a NIO client server framework which enables quick and easy development of network applications such as protocol servers and clients. Netty ChannelPipeline architecture. ChannelPipeline implements an advanced form of the Intercepting Filter pattern to give a user full control over how an event is handled and how the ChannelHandlers in a pipeline interact with each other.</p>
-									<p>Pros</p>
-									
-									<ul>
-									  <li>Proven Pipeline technology</li>
-									  <li type="square">Extensive documentation (User Guide, How-to, Blogs, Books)</li>
-									  <li>Fully asynchronous and event-driven</li>
-									  <li>Handlers can operate on raw bytes (ByteBuf)</li>
-									  <li>Flexible factory pattern for creating a pipeline</li>
-									  <li>Built-in support for short circuiting a pipeline handler by specifying a timeout for handler processing in Netty 4.</li>
-									</ul>
-   
-								</div>
-								
-								<img src="images/Pipeline.png" alt="">
-								
-							</article>
-							<!-- blogpost start -->
-							<article id="pipeline" class="blogpost">
-								<header>
-									<h2>Adding new handler in PipeLine</a></h2>
-									
-								</header>
-								<div class="blogpost-content">
-									<p>Adding a new Handler in the pipe line is pretty simple. Following is sample code which adds a handler which will print all incoming URLs</p>
-									<pre><code class="java">
-import com.ebay.neutrino.NeutrinoRequest;
-import io.netty.channel.ChannelDuplexHandler;
-import io.netty.channel.ChannelHandler;
-import io.netty.channel.ChannelHandlerContext;
-
-/**
- * Created by blpaul on 11/10/2015.
- */
-@ChannelHandler.Sharable
-public class NeutrinoSampleHandler extends ChannelDuplexHandler {
-
-	@Override
-	public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
-		if (msg instanceof NeutrinoRequest) {
-			NeutrinoRequest request = (NeutrinoRequest) msg;
-			System.out.println(request.requestUri());
-
-		}
-		ctx.fireChannelRead(msg);
-	}
-
-}
-									</code></pre>
-									
-									<p>Initialize the handler in NeutrinoServiceInitializer.scala </p>
-									<pre><code class="java">
-val timeout = new ChannelTimeoutHandler(settings.timeouts)
-//Initializing the new Handler
-val sampleHandler = new NeutrinoSampleHandler();
-
-									
-pipeline.addLast("user-pipeline", user)
-
-
-//Adding the new Handler
-pipeline.addLast("sampleHandler", sampleHandler)
-
-// Final handler will reroute inbound to our downstream, as available
-pipeline.addLast("downstream", downstream)
-									</code></pre>
-								</div>
-							
-							</article>
-							<!-- blogpost end -->
-							
-							<!-- blogpost start -->
-							<article  id="poolresolvers" class="blogpost">
-								<header>
-									<h2>PoolResolvers</a></h2>
-								
-								</header>
-								<div class="blogpost-content">
-									<p>PoolResolvers are used to resolve a request to pool. Supported pool resolvers are CNameResolver and L7AddressResolver. CNameResolver resolves the request to a pool based on the Canonical name(cname) while L7AddressResolverresolves the request based cname and url postfix.</p>
-									<p>Below is a sample code for adding a resolver for 2FA. If the 2FA token is missing in the header, Neutrino will redirect the request to a 2FA server
-									<pre><code class="java">
-import com.ebay.neutrino.*;
-
-import com.ebay.neutrino.config.VirtualPool;
-import scala.None;
-import scala.Option;
-import scala.collection.concurrent.TrieMap;
-
-import java.util.List;
-
-import static com.ebay.neutrino.config.Transport$.*;
-
-/**
- * Created by blpaul on 11/10/2015.
- */
-
-public class TwoFAResolver implements PoolResolver {
-
-    private Integer version = 0;
-
-    private NeutrinoPool twofaPool;
-
-    @Override
-    public Option<NeutrinoPool> resolve(NeutrinoPools pools, NeutrinoRequest request) {
-
-		// Cache the twofaPool 
-        if (version != pools.version()) {
-            version = pools.version();
-            NeutrinoPoolId neutrinoId;
-            // Since Transport is sealed trait, we have access with MODULE in java
-            neutrinoId = new NeutrinoPoolId("twofa", MODULE$.apply("http"));
-            twofaPool  = pools.pools().get(neutrinoId).get();
-
-
-        }
-        String token = request.headers().get("TOKEN");
-
-        Option<NeutrinoPool> neutrinoPoolOption = Option.apply(null);
-		
-		// Validate the token
-        Boolean validated = true;
-        if (validated == false) {
-            neutrinoPoolOption = Option.apply(twofaPool);
-            return neutrinoPoolOption;
-        }
-
-        return neutrinoPoolOption;
-
-    }
-}
-									</code></pre>
-									
-									<p>Initialize the pool resolver in NeutrinoPoolResolver.scala</p>
-									<pre><code class="java">
- case "layerseven"   => new L7AddressResolver
- case "twofa"   => new TwoFAResolver
-									</code></pre>
-									
-									<p>Select the pool resolver for the configuration</p>
-									<pre><code class="java">
-listeners = [
-    {
-      # Should try cname and then skip to default
-      pool-resolver = ["twofa", "cname", "layerseven"],
-      port = 9080,
-      port-alias = 80,
-      protocol = "http"
-    }
-  ]
-  .....
-  .....
-    pools = [
-    { id = "twofa", protocol = "http", ...
-									</code></pre>
-								</div>
-							
-							</article>
-							<!-- blogpost end -->
-							
-							<!-- blogpost start -->
-							<article  id="poolbalancers" class="blogpost">
-								<header>
-									<h2><a href="blog-post.html">Pool Balancers</a></h2>
-									<div class="post-info">
+							<p>This FAQ section covers most of the issues faced by developers. If you cannot find the solution, please send an email to neutrinoslb@gmail.com</p>
+							<!-- Nav tabs -->
+							<ul class="nav nav-tabs style-1" role="tablist">
+								<li class="active"><a href="#tab1" role="tab" data-toggle="tab"><i class="fa  fa-life-saver pr-10"></i>Support</a></li>
+							</ul>
+							<!-- Tab panes -->
+							<div class="tab-content">
+								<div class="tab-pane fade in active" id="tab1">
+									<!-- accordion start -->
+									<div class="panel-group collapse-style-1" id="accordion-faq">
+										<div class="panel panel-default">
+											<div class="panel-heading">
+												<h4 class="panel-title">
+													<a data-toggle="collapse" data-parent="#accordion-faq" href="#collapseOne" class="collapsed">
+														<i class="fa fa-question-circle pr-10"></i> When Neutrino runs in Docker, it is showing HostAddress as "Not Available". 
+													</a>
+												</h4>
+											</div>
+											<div id="collapseOne" class="panel-collapse collapse">
+												<div class="panel-body">
+													Neutrino uses InetAddress of java to find the HostName and HostAddress. Docker has the issue of not setting the hostname when running with the option --net=host. Check the link https://github.com/docker/docker/issues/12076
+												</div>
+											</div>
+										</div>
+										<div class="panel panel-default">
+											<div class="panel-heading">
+												<h4 class="panel-title">
+													<a data-toggle="collapse" data-parent="#accordion-faq" href="#collapseTwo" class="collapsed">
+														<i class="fa fa-question-circle pr-10"></i>HA proxy vs Neutrino
+													</a>
+												</h4>
+											</div>
+											<div id="collapseTwo" class="panel-collapse collapse">
+												<div class="panel-body">
+													HA Proxy is developed using C and inherently efficient. But modifying HAProxy, for example, loading configuration from DB instead of a file is difficult. Neutrino SLB strength lies in its programmability and customizable nature. It is very easy to customize and adapt to a existing topology.
+												</div>
+											</div>
+										</div>
 										
+										<div class="panel panel-default">
+											<div class="panel-heading">
+												<h4 class="panel-title">
+													<a data-toggle="collapse" data-parent="#accordion-faq" href="#collapseThree" class="collapsed">
+														<i class="fa fa-question-circle pr-10"></i>Does containers slow down performance 
+													</a>
+												</h4>
+											</div>
+											<div id="collapseThree" class="panel-collapse collapse">
+												<div class="panel-body">
+													Not much. As long as you use the host network stack inside the container. Advantage of running in the container is that, you don't need to worry about installed libraries and OS version
+												</div>
+											</div>
+										</div>
+										<div class="panel panel-default">
+											<div class="panel-heading">
+												<h4 class="panel-title">
+													<a data-toggle="collapse" data-parent="#accordion-faq" href="#collapseFour" class="collapsed">
+														<i class="fa fa-question-circle pr-10"></i>Can we change the location of the configuration file
+													</a>
+												</h4>
+											</div>
+											<div id="collapseFour" class="panel-collapse collapse">
+												<div class="panel-body">
+													Yes, you need to update the source code. Please search for slb.conf and there will be two references
+												</div>
+											</div>
+										</div>
+										<div class="panel panel-default">
+											<div class="panel-heading">
+												<h4 class="panel-title">
+													<a data-toggle="collapse" data-parent="#accordion-faq" href="#collapseFive" class="collapsed">
+														<i class="fa fa-question-circle pr-10"></i>Can Neutrino run on Java 8
+													</a>
+												</h4>
+											</div>
+											<div id="collapseFive" class="panel-collapse collapse">
+												<div class="panel-body">
+													Scala has experimentally support of Java 8. Please use Java 7 for all your production use case
+												</div>
+											</div>
+										</div>
+										<div class="panel panel-default">
+											<div class="panel-heading">
+												<h4 class="panel-title">
+													<a data-toggle="collapse" data-parent="#accordion-faq" href="#collapseSix" class="collapsed">
+														<i class="fa fa-question-circle pr-10"></i>Why openjdk used in Docker container
+													</a>
+												</h4>
+											</div>
+											<div id="collapseSix" class="panel-collapse collapse">
+												<div class="panel-body">
+													Only openjdk can be re-distributed. For all your internal usages, you can use Oracle JDK
+												</div>
+											</div>
+										</div>
+										<div class="panel panel-default">
+											<div class="panel-heading">
+												<h4 class="panel-title">
+													<a data-toggle="collapse" data-parent="#accordion-faq" href="#collapseSeven" class="collapsed">
+														<i class="fa fa-question-circle pr-10"></i>Unable to bind to ports less than 1024
+													</a>
+												</h4>
+											</div>
+											<div id="collapseSeven" class="panel-collapse collapse">
+												<div class="panel-body">
+													You can only bind to ports less than 1024 if you are root. Please run Neutrino as root if you need to bind to ports less than 1024
+												</div>
+											</div>
+										</div>
+										
+										<div class="panel panel-default">
+											<div class="panel-heading">
+												<h4 class="panel-title">
+													<a data-toggle="collapse" data-parent="#accordion-faq" href="#collapseEight" class="collapsed">
+														<i class="fa fa-question-circle pr-10"></i>Why ports range 1-63455 is EXPOSED in Dockerfile
+													</a>
+												</h4>
+											</div>
+											<div id="collapseEight" class="panel-collapse collapse">
+												<div class="panel-body">
+													Dockerfile is written for a general purpose SLB. If you have specific use cases, please change the port range and push the docker image to your docker hub.
+												</div>
+											</div>
+										</div>
+										
+										<div class="panel panel-default">
+											<div class="panel-heading">
+												<h4 class="panel-title">
+													<a data-toggle="collapse" data-parent="#accordion-faq" href="#collapseNine" class="collapsed">
+														<i class="fa fa-question-circle pr-10"></i>How to change the logging level
+													</a>
+												</h4>
+											</div>
+											<div id="collapseNine" class="panel-collapse collapse">
+												<div class="panel-body">
+													Please go to simplelogger.properties and change the logging level. Rebuild Neutrino
+												</div>
+											</div>
+										</div>
+										
+										</div>
 									</div>
-								</header>
-								<div class="blogpost-content">
-									<p>Pool Balancers are used to manage the traffic between individual VMs in the pool and it can configured for each pool. Currently, there is support for both RoundRobin and LeastConnection Balancers</p>
-									<p>Below is sample code for adding a Round Robin Pool Balancer</p>
-									<pre><code class="java">
-import com.ebay.neutrino.{NeutrinoNode, NeutrinoRequest}
-
-
-class RoundRobinBalancer extends Balancer {
-
-  type Entry = NeutrinoNode
-
-  private val members = new BalancerNodes[Entry]()
-  private var iter = members.available.iterator
-
-
-  // Re(set) the current membership of the load-balancer
-  override def rebuild(members: Array[NeutrinoNode]) =
-    this.members.set(members, identity)
-
-
-  // Resolve an endpoint for request processing
-  def assign(request: NeutrinoRequest): Option[NeutrinoNode] =
-    if (members.isEmpty)
-      None
-    else
-      // Store the active iterator
-      members.synchronized {
-        if (iter.isEmpty) iter = members.available.iterator
-        if (iter.hasNext) Option(iter.next._1)
-        else None
-      }
-
-  // Release an endpoint from request processing
-  def release(request: NeutrinoRequest, node: NeutrinoNode) = {}
-
-}									</code></pre>
-									
-									<p>Initialize the balancer in BalancerSettings.scala </p>
-									<pre><code class="java">
-val RoundRobin = BalancerSettings(classOf[RoundRobinBalancer], None)
-....
-....
- def apply(balancer: String): BalancerSettings =
-    balancer toLowerCase match {
-      case "rr" | "round-robin" => RoundRobin
-									</code></pre>
-									
-									<p>Add the new Balancer to the pool </p>
-									<pre><code class="java">
-pools = [
-  { id = "twofa", protocol = "http", balancer = "round-robin",
-									</code></pre>
+									<!-- accordion end -->
 								</div>
-							
-							</article>
-							<!-- blogpost end -->
-
-							
-							<!-- pagination end -->
-
+								
+							</div>
 						</div>
 						<!-- main end -->
 
 						<!-- sidebar start -->
 						<!-- ================ -->
-						<aside class="col-md-4 col-lg-3 col-lg-offset-1">
+						<!--<aside class="col-md-4 col-lg-3 col-lg-offset-1">
 							<div class="sidebar">
 								<div class="block clearfix">
-									<h3 class="title">Sidebar menu</h3>
-									<div class="separator-2"></div>
-									<nav>
-										<ul class="nav nav-pills nav-stacked">
-											<li class="active"><a href="neutrino-landing.html">Home</a></li>
-											<li class="active"><a href="neutrino-doc.html#pipeline">PipeLine Architecture</a></li>
-											<li class="active"><a href="neutrino-doc.html#poolresolvers">Pool Resolvers</a></li>
-											<li class="active"><a href="neutrino-doc.html#poolbalancers">Pool Balancers</a></li>
-											
-										</ul>
-									</nav>
+									<h4>For Questions and Concerns, please send an email to neutrinoslb@gmail.com</h4>
 								</div>
-								
-															
-							
 							</div>
-						</aside>
+						</aside> -->
 						<!-- sidebar end -->
 
 					</div>
 				</div>
 			</section>
+			<!-- main-container end -->
 			<!-- main-container end -->
 
 			<!-- footer top start -->

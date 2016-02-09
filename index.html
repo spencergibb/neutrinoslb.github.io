@@ -8,6 +8,7 @@
 		<meta charset="utf-8">
 		<title>Neutrino Software Load Balancer</title>
 		<meta name="description" content="Highly Modular, Customizable and Efficent Software Load Balancer">
+		<script src="//load.sumome.com/" data-sumo-site-id="2a7554daf78b7e18bc894bcf0491732202d3cbea097a83ec97e34ed32e86cef6" async="async"></script>
 		<meta name="author" content="htmlcoder.me">
 
 		<!-- Mobile Meta -->
@@ -18,7 +19,6 @@
 
 		<!-- Web Fonts -->
 		<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic,500,500italic,700,700italic' rel='stylesheet' type='text/css'>
-		<script src="//load.sumome.com/" data-sumo-site-id="2a7554daf78b7e18bc894bcf0491732202d3cbea097a83ec97e34ed32e86cef6" async="async"></script>
 		<link href='http://fonts.googleapis.com/css?family=Raleway:700,400,300' rel='stylesheet' type='text/css'>
 		<link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
 		<link href='http://fonts.googleapis.com/css?family=PT+Serif' rel='stylesheet' type='text/css'>
@@ -423,7 +423,7 @@
 								
 								<div class="body">
 									<h4 class="title">Modular and pluggable</h4>
-									<p>Because of modular and pluggable design, new Routing policy or resolving polices can be added with out touching the core</p>
+									<p>Neutrino’s modular and pluggable architecture allows for easy extensibility for new routing and resolving policies. Customizable Pipeline helps to add new module in Request and Response channel.</p>
 									<a href="neutrino-doc.html#poolresolvers" class="link-dark">Read More<i class="pl-5 fa fa-angle-double-right"></i></a>
 								</div>
 							</div>
@@ -433,8 +433,8 @@
 							<div class="feature-box-2 object-non-visible" data-animation-effect="fadeInDownSmall" data-effect-delay="200">
 								<span class="icon default-bg small"><i class="fa fa-connectdevelop"></i></span>
 								<div class="body">
-									<h4 class="title">Customizable Pipeline</h4>
-									<p>Configure all aspects of Load Balancing through configuration file and Request/Response pipeline</p>
+									<h4 class="title">Switching Options</h4>
+									<p>Supports L7 Routing based on Canonical names, url context and traffic rules. L4 Routing is achieved by multiple port numbers</p>
 									<a href="neutrino-doc.html#pipeline" class="link-dark">Read More<i class="pl-5 fa fa-angle-double-right"></i></a>
 								</div>
 							</div>
@@ -459,7 +459,7 @@
 								<span class="icon default-bg small"><i class="fa fa-check-circle-o"></i></span>
 								<div class="body">
 									<h4 class="title">High Availability and Performance</h4>
-									<p>Provide 99.999% avaliability, can support heavy throughput upto 300 Request/Second in a 2 Core VM</p>
+									<p>Provide 99.999% avaliability, can support heavy throughput upto 300 Request/Second in a 2 Core VM. No traffic loss during reconfiguration</p>
 								
 								</div>
 							</div>
@@ -496,8 +496,22 @@
 					<h3>Why Neutrino</h3>
 					<div>
 						<div>
-							<p>Neutrino is a cloud ready, highly modular, customizable software load balancers compared to HAProxy and NGINX. Neutrino is distributed as a jar file, so that it can be easily configured for any existing topology. It also had a very good Pipeline architectire and pool resolvers, so that Neutrino can configured for any load balancing purpose </p>
+							<p>Ebay was looking for options to replace their hardware load balancers which are expensive and unable to keep up with the demand. There were two options, either take an open source product like HAProxy or build an in-house one.</p>
+							<p>From a high level, SLB has to satisfy following requirements</p>
+							<ol>
+							  <li>L7 Switching using canonical names</li>
+							  <li>L7 Switching using canonical names and url context</li>
+							  <li>L7 Switching based on Rules. For eg. Traffic might need to route based on HTTP header, based on authentication header value etc</li>
+							  <li>Layer 4 Switching</li>
+							  <li>Should be able to send the traffic logs to API endpoints</li>
+							  <li>Cluster management is automated using eBay PaaS and Network Topology is stored in a DB and can be accessed through API. SLB should be able to read the topology and reconfigure itself</li>
+							  <li>Load Balancing should support most common algorithms like Least Connection and Round Robin. The framework should be extensible to add more algorithms in the future.</li>
+							  <li>Should be able to run on a Bare Metal, VM or a container</li>
+							  <li>No traffic loss during reconfiguration</li>
+							</ol>
 							
+							<p>HAProxy is the most commonly used SLB across the industry. It is written in C and has a reputation for being fast and efficient (in terms of processor and memory usage).  It can do L4 Switching and  L7 Switching using canonical names and url context. But L7 Switching based on rules, sending log to API end point or adding new load balancing algorithms cannot be satisfied using HAProxy. Reading the configuration from a DB or a API can be achieved through another application, but not optimal. Extending HAProxy to support these features found to be tough. Adding additional load balancing algorithms is also tough in HAProxy. Those are the reasons forced eBay to think about developing a SLB in-house.</p>
+							<p>Neutrino was build keeping the above requirements in mind. It is build in Scala language using Netty Server. It can do L7 routing using canonical names, url context and rule based. It has highly extensible pipeline architecture so that, new modules can be hooked into the pipeline without much work. Developers can add new switching rules and load balancing options easily. New modules can be added to send the log to API end point or load the configuration file from a DB or API. It is using JVM runtime environment, so developers can use either Java or Scala to add modules.</p>
 						</div>
 						
 					</div>
@@ -647,8 +661,8 @@
 		<!-- ================================================== -->
 		<!-- Jquery and Bootstap core js files -->
 		<script type="text/javascript" src="plugins/jquery.min.js"></script>
-		
 		<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+		
 
 		<!-- Modernizr javascript -->
 		<script type="text/javascript" src="plugins/modernizr.js"></script>
